@@ -49,15 +49,18 @@ all: 		$(NAME)
 
 $(NAME): 	$(OBJ)
 				@ar -rcs $(NAME) $(OBJ)
+				@rm -f *.0
+				@echo "\033[1;33m ** Libft compiled O.O **"
 
-$(OBJ): 	$(SRC)
-				@gcc $(CFLAGS) $(SRC)
+%.o:		%.c
+				@gcc $(CFLAGS) -o $@ $<
 
 clean:
 				@rm -f $(OBJ)
 
 fclean:		clean
-				@rm -f $(NAME)
+				@rm -f ./$(NAME)
+				@echo "\033[1;35m Libft deleted -_-"
 
 re:			fclean all
 
