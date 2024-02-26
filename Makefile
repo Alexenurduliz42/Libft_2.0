@@ -14,34 +14,42 @@ NAME	= libft.a
 
 CFLAGS	= -c -Wall -Wextra -Werror
 
-SRC		=	src/ft_atoi.c			src/ft_bzero.c		\
-			src/ft_calloc.c			src/ft_isalnum.c	\
-			src/ft_isalpha.c		src/ft_isascii.c	\
-			src/ft_isdigit.c		src/ft_isprint.c	\
-			src/ft_itoa.c			src/ft_memchr.c		\
-			src/ft_memcmp.c			src/ft_memcpy.c		\
-			src/ft_memmove.c		src/ft_memset.c		\
-			src/ft_putchar_fd.c		src/ft_putendl_fd.c	\
-			src/ft_putnbr_fd.c		src/ft_putstr_fd.c	\
-			src/ft_split.c			src/ft_strchr.c		\
-			src/ft_strdup.c			src/ft_striteri.c	\
-			src/ft_strjoin.c		src/ft_strlcat.c	\
-			src/ft_strlcpy.c		src/ft_strlen.c		\
-			src/ft_strmapi.c		src/ft_strncmp.c	\
-			src/ft_strnstr.c		src/ft_strrchr.c	\
-			src/ft_strtrim.c		src/ft_substr.c		\
-			src/ft_toupper.c		src/ft_tolower.c	\
-														\
-		src/ft_lstnew.c			src/ft_lstadd_front.c	\
- 		src/ft_lstsize.c		src/ft_lstadd_back.c  	\
- 		src/ft_lstlast.c		src/ft_lstdelone.c		\
- 		src/ft_lstclear.c		src/ft_lstiter.c		\
- 		src/ft_lstmap.c									\
-														\
-		src/printf/ft_printf.c	src/printf/puts.c		\
-		src/printf/write.c								\
-		src/get_next_line/get_next_line.c				\
-		src/get_next_line/get_next_line_utils.c			\
+SRC-DIR	= src/
+IS-DIR	= $(SRC-DIR)ft_is/
+MEM-DIR	= $(SRC-DIR)ft_mem/
+FD-DIR	= $(SRC-DIR)ft_fd/
+LST-DIR	= $(SRC-DIR)ft_lst/
+STR-DIR	= $(SRC-DIR)ft_str/
+
+
+SRC		=	$(SRC-DIR)ft_atoi.c			$(SRC-DIR)ft_bzero.c		\
+			$(SRC-DIR)ft_calloc.c		$(IS-DIR)ft_isalnum.c		\
+			$(IS-DIR)ft_isalpha.c		$(IS-DIR)ft_isascii.c		\
+			$(IS-DIR)ft_isdigit.c		$(IS-DIR)ft_isprint.c		\
+			$(SRC-DIR)ft_itoa.c			$(MEM-DIR)ft_memchr.c		\
+			$(MEM-DIR)ft_memcmp.c		$(MEM-DIR)ft_memcpy.c		\
+			$(MEM-DIR)ft_memmove.c		$(MEM-DIR)ft_memset.c		\
+			$(FD-DIR)ft_putchar_fd.c	$(FD-DIR)ft_putendl_fd.c	\
+			$(FD-DIR)ft_putnbr_fd.c		$(FD-DIR)ft_putstr_fd.c		\
+			$(SRC-DIR)ft_split.c		$(STR-DIR)ft_strchr.c		\
+			$(STR-DIR)ft_strdup.c		$(STR-DIR)ft_striteri.c		\
+			$(STR-DIR)ft_strjoin.c		$(STR-DIR)ft_strlcat.c		\
+			$(STR-DIR)ft_strlcpy.c		$(STR-DIR)ft_strlen.c		\
+			$(STR-DIR)ft_strmapi.c		$(STR-DIR)ft_strncmp.c		\
+			$(STR-DIR)ft_strnstr.c		$(STR-DIR)ft_strrchr.c		\
+			$(STR-DIR)ft_strtrim.c		$(STR-DIR)ft_substr.c		\
+			$(SRC-DIR)ft_toupper.c		$(SRC-DIR)ft_tolower.c		\
+																	\
+		$(LST-DIR)ft_lstnew.c			$(LST-DIR)ft_lstadd_front.c	\
+ 		$(LST-DIR)ft_lstsize.c			$(LST-DIR)ft_lstadd_back.c  \
+ 		$(LST-DIR)ft_lstlast.c			$(LST-DIR)ft_lstdelone.c	\
+ 		$(LST-DIR)ft_lstclear.c			$(LST-DIR)ft_lstiter.c		\
+ 		$(LST-DIR)ft_lstmap.c										\
+																	\
+		src/printf/ft_printf.c	src/printf/puts.c					\
+		src/printf/write.c											\
+		src/get_next_line/get_next_line.c							\
+		src/get_next_line/get_next_line_utils.c						\
 
 OBJ		= 	$(SRC:.c=.o)
 
