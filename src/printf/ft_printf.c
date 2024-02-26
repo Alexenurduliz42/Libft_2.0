@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 static void	pf_putformat(char *str, size_t *i, int *result, va_list src)
 {

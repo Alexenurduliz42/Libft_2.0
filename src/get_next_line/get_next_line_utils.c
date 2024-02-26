@@ -1,38 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   write.c                                            :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahiguera <ahiguera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 18:55:56 by ahiguera          #+#    #+#             */
-/*   Updated: 2023/12/11 12:47:49 by ahiguera         ###   ########.fr       */
+/*   Created: 2023/11/23 17:48:11 by ahiguera          #+#    #+#             */
+/*   Updated: 2023/12/11 15:30:56 by ahiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	pf_betterwrite(void *buf, size_t len, int *result)
+void	gn_strncpy(char *result, char *orin, size_t len)
 {
-	ssize_t	w;
+	size_t	i;
 
-	if (*result == -1)
-		return ;
-	w = write(STDOUT_FILENO, buf, len);
-	if (w == -1)
-		*result = -1;
-	else
-		*result += w;
+	i = 0;
+	while (i < len && orin[i] != '\0')
+	{
+		result[i] = orin[i];
+		i++;
+	}
+	result[len] = '\0';
 }
 
-void	pf_putchar(char c, int *result)
+void	gn_free(char *fres)
 {
-	pf_betterwrite(&c, 1, result);
+	if (fres != NULL)
+		free (fres);
 }
 
-void	pf_putstr(char *str, int *result)
+char	gn_strchr(char *str, char c)
 {
-	if (str == NULL)
-		return (pf_putstr(NULL_STR, result));
-	pf_betterwrite(str, ft_strlen(str), result);
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
 }
