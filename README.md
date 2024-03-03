@@ -90,6 +90,7 @@ Son funciones que operan en memoria sin alocarla mediante *malloc()* o *calloc()
 | ft_toupper         |  `int ft_tolower(int c);`                       |
 | ft_tolower         |  `int ft_toupper(int c);`                       |
 | ft_split           |  `char **ft_split(char const *s, char c);`      |
+| ft_free            |  `void    ft_free(char **array)`                |
 
 ---
 
