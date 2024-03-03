@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-void	*ft_calloc(size_t src, size_t size)
+void	*ft_calloc(size_t len, size_t size)
 {
 	void	*result;
 
-	result = malloc(src * size);
+	result = malloc(len * size);
 	if (result == NULL)
 		return (NULL);
-	ft_bzero(result, src * size);
+	ft_bzero(result, len * size);
 	return (result);
 }
