@@ -43,19 +43,6 @@ static char	*copy_word(char const *str, char c, size_t *i)
 	return (result);
 }
 
-static void	ft_free(char **split)
-{
-	size_t	i;
-
-	i = 0;
-	while (split[i])
-	{
-		free(split[i]);
-		i++;
-	}
-	free(split);
-}
-
 char	**ft_split(char const *str, char c)
 {
 	char	**result;
