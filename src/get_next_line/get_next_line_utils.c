@@ -1,38 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahiguera <ahiguera@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 16:39:44 by ahiguera          #+#    #+#             */
-/*   Updated: 2023/12/04 20:03:27 by ahiguera         ###   ########.fr       */
+/*   Created: 2023/11/23 17:48:11 by ahiguera          #+#    #+#             */
+/*   Updated: 2023/12/11 15:30:56 by ahiguera         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-int	ft_atoi(const char *str)
+void	gn_strncpy(char *result, char *orin, size_t len)
 {
-	int	result;
-	int	sign;
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (ft_isspace(str[i]))
-		i++;
-	sign = 1;
-	if (str[i] == '+' || str[i] == '-')
+	while (i < len && orin[i] != '\0')
 	{
-		if (str[i] == '-')
-			sign *= -1;
+		result[i] = orin[i];
 		i++;
 	}
-	result = 0;
-	while (ft_isdigit(str[i]))
+	result[len] = '\0';
+}
+
+void	gn_free(char *fres)
+{
+	if (fres != NULL)
+		free (fres);
+}
+
+char	gn_strchr(char *str, char c)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		result = (result * 10) + (str[i] - '0');
+		if (str[i] == c)
+			return (1);
 		i++;
 	}
-	return (sign * result);
+	return (0);
 }

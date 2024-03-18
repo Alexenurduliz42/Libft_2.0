@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahiguera <ahiguera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/02 16:59:05 by ahiguera          #+#    #+#             */
-/*   Updated: 2023/12/04 20:05:38 by ahiguera         ###   ########.fr       */
+/*   Created: 2024/03/18 20:13:38 by alex              #+#    #+#             */
+/*   Updated: 2024/03/18 20:16:51 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	*ft_calloc(size_t len, size_t size)
+int	ft_isspace(int c)
 {
-	void	*result;
-
-	result = malloc(len * size);
-	if (result == NULL)
-		return (NULL);
-	ft_bzero(result, len * size);
-	return (result);
+	if (c == ' ' || c == '\n' || c == '\t')
+		return (true);
+	if (c == '\r' || c == '\f' || c == '\v')
+		return (true);
+	return (false);
 }

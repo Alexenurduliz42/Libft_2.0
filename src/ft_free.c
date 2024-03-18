@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahiguera <ahiguera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/02 16:59:05 by ahiguera          #+#    #+#             */
-/*   Updated: 2023/12/04 20:05:38 by ahiguera         ###   ########.fr       */
+/*   Created: 2024/03/03 04:47:40 by columbux          #+#    #+#             */
+/*   Updated: 2024/03/18 20:25:40 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t len, size_t size)
+void	ft_free(char **array)
 {
-	void	*result;
+	size_t	i;
 
-	result = malloc(len * size);
-	if (result == NULL)
-		return (NULL);
-	ft_bzero(result, len * size);
-	return (result);
+	i = 0;
+	while (array[i])
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
 }
