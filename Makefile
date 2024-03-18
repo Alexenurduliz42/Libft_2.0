@@ -6,7 +6,7 @@
 #    By: alex <alex@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 12:51:23 by ahiguera          #+#    #+#              #
-#    Updated: 2024/03/18 20:39:19 by alex             ###   ########.fr        #
+#    Updated: 2024/03/18 20:45:15 by alex             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ DARK_YELLOW 	=	\033[38;5;143m
 DARK_GREEN 		=	\033[38;2;75;179;82m
 BROWN 			=	\033[38;2;184;143;29m
 
-#████████████████████████████ Configuration ███████████████████████████████████#
+#████████████████████████████ PATHS ███████████████████████████████████████████#
 SRC-DIR		= 		./src/
 IS-DIR		= 		$(SRC-DIR)ft_is/
 MEM-DIR		= 		$(SRC-DIR)ft_mem/
@@ -44,6 +44,7 @@ STR-DIR		= 		$(SRC-DIR)ft_str/
 PRINTF-DIR 	= 		$(SRC-DIR)printf/
 GNL-DIR 	= 		$(SRC-DIR)get_next_line/
 
+#████████████████████████████ SOURCES █████████████████████████████████████████#
 SRC			=		$(FD-DIR)ft_putchar_fd.c	\
 					$(FD-DIR)ft_putendl_fd.c	\
 					$(FD-DIR)ft_putnbr_fd.c		\
@@ -111,7 +112,7 @@ all: 		$(NAME)
 
 $(NAME): 	$(OBJ)
 					@ar -rcs $(NAME) $(OBJ)
-					@echo "$(GREEN)✔️ Libft compiled"
+					@echo "$(GREEN)\n✔️ Libft compiled\n"
 
 %.o:%.c
 					@$(CC) $(CFLAGS) -o $@ $<
@@ -121,8 +122,12 @@ clean:
 
 fclean:		clean
 					@$(RM) ./$(NAME)
-					@echo "$(RED)Libft deleted"
+					@echo "$(RED)\nLibft deleted\n"
+
+normi:
+					clear
+					norminette $(SRC)
 
 re:			fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re normi
