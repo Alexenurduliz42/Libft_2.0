@@ -6,7 +6,7 @@
 #    By: alex <alex@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 12:51:23 by ahiguera          #+#    #+#              #
-#    Updated: 2024/03/18 20:22:41 by alex             ###   ########.fr        #
+#    Updated: 2024/03/18 20:26:15 by alex             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,6 +63,7 @@ SRC		=	$(FD-DIR)ft_putchar_fd.c	\
 			$(SRC-DIR)ft_split.c		\
 			$(SRC-DIR)ft_toupper.c		\
 			$(SRC-DIR)ft_tolower.c		\
+			$(SRC-DIR)ft_free.c			\
 										\
 		$(LST-DIR)ft_lstnew.c			\
 		$(LST-DIR)ft_lstadd_front.c		\

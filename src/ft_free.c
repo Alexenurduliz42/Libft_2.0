@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: columbux <columbux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 04:47:40 by columbux          #+#    #+#             */
-/*   Updated: 2024/03/03 04:52:28 by columbux         ###   ########.fr       */
+/*   Updated: 2024/03/18 20:25:40 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_free(char **array)
+void	ft_free(char **array)
 {
 	size_t	i;
 
