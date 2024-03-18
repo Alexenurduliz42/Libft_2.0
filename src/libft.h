@@ -6,7 +6,7 @@
 /*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 21:11:51 by ahiguera          #+#    #+#             */
-/*   Updated: 2024/03/18 20:15:15 by alex             ###   ########.fr       */
+/*   Updated: 2024/03/18 20:20:05 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 //ft_*
 int		ft_atoi(const char *str);
+long	ft_atol(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_itoa(int n);
