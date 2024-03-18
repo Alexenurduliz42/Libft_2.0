@@ -1,10 +1,22 @@
-//TODO: header
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/18 20:13:38 by alex              #+#    #+#             */
+/*   Updated: 2024/03/18 20:16:51 by alex             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isspace(int c)
+#include "../libft.h"
+
+int	ft_isspace(int c)
 {
 	if (c == ' ' || c == '\n' || c == '\t')
-        return (true);
+		return (true);
 	if (c == '\r' || c == '\f' || c == '\v')
-        return (true);
-    return (false);
+		return (true);
+	return (false);
 }

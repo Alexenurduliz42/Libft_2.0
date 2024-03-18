@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ahiguera <ahiguera@student.42.fr>          +#+  +:+       +#+         #
+#    By: alex <alex@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 12:51:23 by ahiguera          #+#    #+#              #
-#    Updated: 2024/02/24 17:39:41 by ahiguera         ###   ########.fr        #
+#    Updated: 2024/03/18 20:13:18 by alex             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRC		=	$(FD-DIR)ft_putchar_fd.c	\
 			$(IS-DIR)ft_isalpha.c		\
 			$(IS-DIR)ft_isprint.c		\
 			$(IS-DIR)ft_isdigit.c		\
+			$(IS-DIR)ft_isspace.c		\
 										\
 			$(MEM-DIR)ft_memchr.c		\
 			$(MEM-DIR)ft_memcmp.c		\
