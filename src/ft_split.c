@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahiguera <ahiguera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 12:46:24 by ahiguera          #+#    #+#             */
-/*   Updated: 2023/12/04 20:08:32 by ahiguera         ###   ########.fr       */
+/*   Updated: 2024/03/31 00:25:48 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char	**ft_split(char const *str, char c)
 		result[j] = copy_word(str, c, &i);
 		if (result[j] == NULL)
 		{
-			ft_free(result);
+			ft_free_array(result);
 			return (NULL);
 		}
 		j++;

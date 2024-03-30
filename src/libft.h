@@ -6,7 +6,7 @@
 /*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 21:11:51 by ahiguera          #+#    #+#             */
-/*   Updated: 2024/03/18 20:20:05 by alex             ###   ########.fr       */
+/*   Updated: 2024/03/31 00:32:03 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
 size_t	ft_strlen(const char *str);
+int		ft_strlin(const char *str);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
@@ -83,7 +84,7 @@ char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-void	ft_free(char **array);
+void	ft_free_array(char **array);
 
 /* ------------------------------------------------------------------------- */
 //ft_printf prototypes
@@ -114,9 +115,8 @@ void	pf_putuntilpercent(char *str, size_t *i, int *result);
 #  define BUFFER_SIZE 50
 # endif
 
-void	gn_strncpy(char *result, char *orin, size_t len);
-void	gn_free(char *fres);
-char	gn_strchr(char *str, char c);
+char	*gn_strchr_(char *s, int c);
+char	*gn_strjoin(char *s1, char const *s2, size_t len);
 
 char	*get_next_line(int fd);
 

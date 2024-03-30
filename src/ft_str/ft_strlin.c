@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free.c                                          :+:      :+:    :+:   */
+/*   ft_strlin.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/03 04:47:40 by columbux          #+#    #+#             */
-/*   Updated: 2024/03/31 00:25:48 by alex             ###   ########.fr       */
+/*   Created: 2024/03/30 17:48:42 by alex              #+#    #+#             */
+/*   Updated: 2024/03/30 18:28:29 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_array(char **array)
+int	ft_strlin(const char *str)
 {
-	size_t	i;
+	int	len;
 
-	i = 0;
-	while (array[i])
-	{
-		free(array[i]);
-		i++;
-	}
-	free(array);
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return (len);
 }
