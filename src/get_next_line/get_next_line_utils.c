@@ -3,44 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahiguera <ahiguera@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 17:48:11 by ahiguera          #+#    #+#             */
-/*   Updated: 2023/12/11 15:30:56 by ahiguera         ###   ########.fr       */
+/*   Updated: 2024/03/31 00:31:35 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	gn_strncpy(char *result, char *orin, size_t len)
-{
-	size_t	i;
 
-	i = 0;
-	while (i < len && orin[i] != '\0')
+char	*gn_strchr_(char *s, int c)
+{
+	while (*s)
 	{
-		result[i] = orin[i];
-		i++;
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
 	}
-	result[len] = '\0';
+	return (NULL);
 }
 
-void	gn_free(char *fres)
+char	*gn_strjoin(char *s1, char const *s2, size_t len)
 {
-	if (fres != NULL)
-		free (fres);
-}
+	size_t	s1_len;
+	size_t	s2_len;
+	char	*join;
 
-char	gn_strchr(char *str, char c)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
+	if (!s1 || !s2)
+		return (NULL);
+	s1_len = ft_strlen(s1);
+	s2_len = len;
+	join = (char *)malloc((s1_len + s2_len + 1) * sizeof(char));
+	if (!join)
+		return (NULL);
+	ft_strlcpy(join, s1, s1_len + 1);
+	ft_strlcpy((join + s1_len), s2, s2_len + 1);
+	free(s1);
+	return (join);
 }

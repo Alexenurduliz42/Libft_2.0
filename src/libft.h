@@ -6,7 +6,7 @@
 /*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 21:11:51 by ahiguera          #+#    #+#             */
-/*   Updated: 2024/03/30 18:29:16 by alex             ###   ########.fr       */
+/*   Updated: 2024/03/31 00:32:03 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-void	ft_free(char **array);
+void	ft_free_array(char **array);
 
 /* ------------------------------------------------------------------------- */
 //ft_printf prototypes
@@ -115,9 +115,8 @@ void	pf_putuntilpercent(char *str, size_t *i, int *result);
 #  define BUFFER_SIZE 50
 # endif
 
-void	gn_strncpy(char *result, char *orin, size_t len);
-void	gn_free(char *fres);
-char	gn_strchr(char *str, char c);
+char	*gn_strchr_(char *s, int c);
+char	*gn_strjoin(char *s1, char const *s2, size_t len);
 
 char	*get_next_line(int fd);
 
