@@ -6,11 +6,11 @@
 /*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 17:48:42 by alex              #+#    #+#             */
-/*   Updated: 2024/03/30 18:28:29 by alex             ###   ########.fr       */
+/*   Updated: 2024/03/31 01:03:36 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 int	ft_strlin(const char *str)
 {
