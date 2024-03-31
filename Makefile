@@ -6,7 +6,7 @@
 #    By: alex <alex@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 12:51:23 by ahiguera          #+#    #+#              #
-#    Updated: 2024/03/31 01:13:16 by alex             ###   ########.fr        #
+#    Updated: 2024/03/31 03:10:34 by alex             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -112,9 +112,7 @@ OBJ			= 	$(SRC:.c=.o)
 all: 		$(NAME)
 
 $(NAME): 	$(OBJ)
-					@mkdir -p bin
 					@ar -rcs $(NAME) $(OBJ)
-					@mv src/**/*.o bin/
 					@echo "$(GREEN)\n✔️ Libft compiled\n"
 
 %.o:%.c
