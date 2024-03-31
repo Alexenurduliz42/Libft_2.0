@@ -6,7 +6,7 @@
 #    By: alex <alex@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 12:51:23 by ahiguera          #+#    #+#              #
-#    Updated: 2024/03/18 20:45:15 by alex             ###   ########.fr        #
+#    Updated: 2024/03/31 00:55:13 by alex             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,7 @@ SRC			=		$(FD-DIR)ft_putchar_fd.c	\
 					$(STR-DIR)ft_strlcat.c		\
 					$(STR-DIR)ft_strlcpy.c		\
 					$(STR-DIR)ft_strlen.c		\
+					$(STR-DIR)ft_strlin.c		\
 					$(STR-DIR)ft_strmapi.c		\
 					$(STR-DIR)ft_strncmp.c		\
 					$(STR-DIR)ft_strnstr.c		\
@@ -106,7 +107,7 @@ SRC			=		$(FD-DIR)ft_putchar_fd.c	\
 
 OBJ			= 	$(SRC:.c=.o)
 
-#███████████████████████████████████████████████████████████████████████████████#
+#████████████████████████████ Rules ███████████████████████████████████████████#
 
 all: 		$(NAME)
 
