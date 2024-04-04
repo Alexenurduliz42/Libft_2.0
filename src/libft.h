@@ -6,7 +6,7 @@
 /*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 21:11:51 by ahiguera          #+#    #+#             */
-/*   Updated: 2024/03/31 00:32:03 by alex             ###   ########.fr       */
+/*   Updated: 2024/04/04 20:26:28 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,24 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdbool.h>
+# include <errno.h>
+# include <stdio.h>
 
 /* ------------------------------------------------------------------------- */
 //libft prototypes
 /* ------------------------------------------------------------------------- */
+
+# define RED	"\033[31m"
+
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+//errors
+void	ft_error(char *message);
+void	ft_perror(void);
 
 //ft_fd
 void	ft_putchar_fd(char c, int fd);
