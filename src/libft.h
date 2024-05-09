@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: columbux <columbux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 21:11:51 by ahiguera          #+#    #+#             */
-/*   Updated: 2024/04/04 20:26:28 by alex             ###   ########.fr       */
+/*   Updated: 2024/05/09 21:43:48 by columbux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,12 @@ typedef struct s_list
 //errors
 void	ft_error(char *message);
 void	ft_perror(void);
+
+//ft_*to*
+int		ft_atoi(const char *str);
+char	*ft_itoa(int n);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 
 //ft_fd
 void	ft_putchar_fd(char c, int fd);
@@ -85,14 +91,9 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 //ft_*
-int		ft_atoi(const char *str);
-long	ft_atol(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
-char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
-int		ft_tolower(int c);
-int		ft_toupper(int c);
 void	ft_free_array(char **array);
 
 /* ------------------------------------------------------------------------- */
