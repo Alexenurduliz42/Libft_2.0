@@ -40,8 +40,6 @@ Prototypes of custom errors.
 | ft_error           |  `void	ft_error(char *message);`              |
 | ft_perror          |  `void	ft_perror(void);`                      |
 
----
-
 ### 🔧 ft_..to..()
 
 This set of functions converts from one data type **to** another.
@@ -53,8 +51,6 @@ This set of functions converts from one data type **to** another.
 | ft_toupper         |  `int ft_tolower(int c);`                       |
 | ft_tolower         |  `int ft_toupper(int c);`                       |
 
----
-
 ### 🔧 ft_..fd()
 
 These functions work with file descriptors.
@@ -65,8 +61,6 @@ These functions work with file descriptors.
 | ft_putstr_fd       |  `void ft_putstr_fd(char *s, int fd);`   |
 | ft_putendl_fd      |  `void ft_putendl_fd(char *s, int fd);`  |
 | ft_putnbr_fd       |  `void ft_putnbr_fd(int n, int fd);`     |
-
----
 
 ### 🔧 ft_is..()
 
@@ -97,8 +91,6 @@ Set of functions that work with lists.
 | ft_lstiteri        |  `void ft_lstclear(t_list **lst, void (*del)(void *));`                     |
 | ft_lstmap          |  `t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));` |
 
----
-
 ### 🔧 ft_mem..()
 
 These are functions that operate on memory without allocating it using malloc() or calloc().
@@ -110,8 +102,6 @@ These are functions that operate on memory without allocating it using malloc() 
 | ft_memmove         |  `void ft_memmove(destino, origen,tamaño);`                  |
 | ft_memchr          |  `void ft_memchr(*pt, valor, tamaño)`                        |
 | ft_memcmp          |  `int ft_memcmp(const void *s1, const void *s2, size_t n);`  |
-
----
 
 ### 🔧 ft_str..()
 
@@ -133,8 +123,6 @@ These are functions that work with strings.
 | ft_strmapi         |  `char *ft_strmapi(char const *s, char (*f)(unsigned int, char));`          |
 | ft_striteri        |  `void ft_striteri(char *s, void (*f)(unsigned int, char*));`               |
 
----
-
 ### 🔧 ft_*()
 
 Independent auxiliary functions.
@@ -151,7 +139,6 @@ Independent auxiliary functions.
 
 Personally redesigned printf function. It is safer than the original version as it uses write internally, although it has fewer data type options.
 
----
 ### 🖋️ get_next_line()
 
 The GNL() function reads lines from a file descriptor line by line, efficiently and without needing to store the entire file in memory.
