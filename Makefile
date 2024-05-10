@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: alex <alex@student.42.fr>                  +#+  +:+       +#+         #
+#    By: columbux <columbux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 12:51:23 by ahiguera          #+#    #+#              #
-#    Updated: 2024/03/31 04:13:49 by alex             ###   ########.fr        #
+#    Updated: 2024/05/09 21:45:10 by columbux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ BROWN 			=	\033[38;2;184;143;29m
 
 #████████████████████████████ PATHS ███████████████████████████████████████████#
 SRC-DIR		= 		./src/
+TO-DIR		= 		$(SRC-DIR)ft_*to*/
 IS-DIR		= 		$(SRC-DIR)ft_is/
 MEM-DIR		= 		$(SRC-DIR)ft_mem/
 FD-DIR		= 		$(SRC-DIR)ft_fd/
@@ -45,7 +46,12 @@ PRINTF-DIR 	= 		$(SRC-DIR)printf/
 GNL-DIR 	= 		$(SRC-DIR)get_next_line/
 
 #████████████████████████████ SOURCES █████████████████████████████████████████#
-SRC			=		$(FD-DIR)ft_putchar_fd.c	\
+SRC			=		$(TO-DIR)ft_atoi.c			\
+					$(TO-DIR)ft_itoa.c			\
+					$(TO-DIR)ft_toupper.c		\
+					$(TO-DIR)ft_tolower.c		\
+												\
+					$(FD-DIR)ft_putchar_fd.c	\
 					$(FD-DIR)ft_putendl_fd.c	\
 					$(FD-DIR)ft_putnbr_fd.c		\
 					$(FD-DIR)ft_putstr_fd.c		\
@@ -78,14 +84,9 @@ SRC			=		$(FD-DIR)ft_putchar_fd.c	\
 					$(STR-DIR)ft_strtrim.c		\
 					$(STR-DIR)ft_substr.c		\
 												\
-					$(SRC-DIR)ft_atoi.c			\
-					$(SRC-DIR)ft_atol.c			\
 					$(SRC-DIR)ft_bzero.c		\
 					$(SRC-DIR)ft_calloc.c		\
-					$(SRC-DIR)ft_itoa.c			\
 					$(SRC-DIR)ft_split.c		\
-					$(SRC-DIR)ft_toupper.c		\
-					$(SRC-DIR)ft_tolower.c		\
 					$(SRC-DIR)ft_free.c			\
 												\
 				$(LST-DIR)ft_lstnew.c			\
